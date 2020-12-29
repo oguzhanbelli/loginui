@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']" color="primary">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/signup']" routerLinkActive="router-link-active">Sign Up </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="../../assets/logo.png">
+
+  </div>
+  <form id="form">
+    <ion-item>
+    
+      <ion-input [(ngModel)]="username" name="username" placeholder="Email"></ion-input>
+    </ion-item> 
+      <ion-item class="paddingT20">
+        
+        <ion-input [(ngModel)]="password" name="password" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="login(username,password)" expand="block" shape="round">Login</ion-button>
+
+  </form>
+</ion-content>
